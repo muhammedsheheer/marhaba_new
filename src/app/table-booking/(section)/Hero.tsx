@@ -8,7 +8,7 @@ const Hero = ({}) => {
           "linear-gradient(170deg, rgba(0, 0, 0, 0.00) 7.51%, rgba(0, 0, 0, 0.80) 92.93%), url(/images/home/menu/bg1.png) lightgray 50% / cover no-repeat",
       }}
     >
-      <div className="absolute inset-0 z-0 bg-black/30" />
+      {/* <div className="absolute inset-0 z-0 bg-black/30" /> */}
       <h1 className="font-oswald z-40 w-full text-center text-5xl leading-[80%] text-[#fff] md:text-[4.75rem]">
         Table Booking
       </h1>
