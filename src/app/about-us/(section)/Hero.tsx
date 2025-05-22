@@ -10,10 +10,10 @@ const Hero = ({}) => {
         <div className="flex w-full flex-col gap-6 px-4 lg:flex-row lg:gap-0 lg:px-0">
           <div className="flex w-full items-center justify-center lg:w-1/2">
             <div className="mt-20 flex flex-col items-start gap-6 lg:mt-0 lg:w-8/12">
-              <h1 className="font-oswald text-5xl font-semibold text-[#fbead2] md:leading-[66px] lg:text-6xl">
+              <h1 className="font-oswald text-5xl font-semibold text-primary md:leading-[66px] lg:text-6xl">
                 Welcome to Marhaba <br />A Symphony of Flavors
               </h1>
-              <p className="font-manrope font-normal text-[#C1B6A6]">
+              <p className="font-manrope font-normal text-[#000]">
                 At Marhaba, dining is more than just a meal — it’s a heartfelt
                 experience. Each dish is prepared with care and reverence,
                 honouring cherished traditions and the joy of togetherness. From

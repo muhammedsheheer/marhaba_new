@@ -5,9 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Sidebar from "./SideBar";
-import CartSheet from "./cart/CartSheet";
-import { BetaMenuActive } from "@/lib/constants";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Navbar = ({
   position = "static",
@@ -47,7 +46,13 @@ const Navbar = ({
         {!isScrolled && (
           <div className="hidden w-full flex-row items-center justify-center gap-[3.48rem] md:flex">
             <div className="flex w-10/12 items-center justify-center">
-              <div className="flex w-fit items-center justify-center gap-12 rounded-full bg-white/30 px-12 py-4 backdrop-blur-md">
+              <div
+                className={
+                  pathname === "/"
+                    ? "flex w-fit items-center justify-center gap-12 rounded-full bg-white/30 px-12 py-4 backdrop-blur-md"
+                    : "flex w-fit items-center justify-center gap-12 rounded-full bg-primary px-12 py-4 backdrop-blur-md"
+                }
+              >
                 <Button
                   asChild
                   variant="link"
@@ -171,11 +176,19 @@ const Navbar = ({
 export default Navbar;
 
 const EqualizerIcon: React.FC = () => {
+  const pathname = usePathname();
+
   return (
     <div className="equalizer-icon rotate">
-      <div className="bar"></div>
-      <div className="bar"></div>
-      <div className="bar"></div>
+      <div
+        className={clsx("bar", pathname === "/" ? "bg-[#fff]" : "bg-primary")}
+      ></div>
+      <div
+        className={clsx("bar", pathname === "/" ? "bg-[#fff]" : "bg-primary")}
+      ></div>
+      <div
+        className={clsx("bar", pathname === "/" ? "bg-[#fff]" : "bg-primary")}
+      ></div>
     </div>
   );
 };
