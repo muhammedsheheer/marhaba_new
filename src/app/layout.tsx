@@ -15,7 +15,7 @@ import Providers from "@/app/Providers";
 export const metadata: Metadata = {
   title: "Marhaba",
   description: "Marhaba",
-  icons: [{ rel: "icon", url: "/Nur.svg" }],
+  icons: [{ rel: "icon", url: "/images/logo.png" }],
 };
 
 const manrope = Oswald({
